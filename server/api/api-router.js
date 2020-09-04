@@ -7,9 +7,11 @@ router.get("/", (req, res) => {
 })
 
 router.post("/", (req, res) => {
+
   const {
     email
   } = req.body;
+  console.log(email)
 
   if (email.includes("@") & email.includes(".")) {
     db.checkExistingEmails(email).then(([user]) => {
@@ -25,7 +27,7 @@ router.post("/", (req, res) => {
       }
     }).catch(err => res.status(500).json(err))
   } else {
-    res.status(400).json({
+    res.status(200).json({
       message: "Please provide a valid email."
     })
   }
