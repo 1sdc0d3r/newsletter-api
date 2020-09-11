@@ -52,9 +52,12 @@ module.exports = {
     }
   },
   production: {
-    client: 'sqlite3',
+    client: 'mysql',
     connection: {
-      filename: './database.sqlite3'
+      host: '70.32.23.16',
+      user: 'bluesmok',
+      password: '22;YHv1rKE5g.p',
+      database: 'bluesmok_newsletter'
     },
     migrations: {
       directory: "./database/migrations"
@@ -62,6 +65,16 @@ module.exports = {
     seeds: {
       directory: "./database/seeds"
     },
+    // client: 'sqlite3',
+    // connection: {
+    //   filename: './database.sqlite3'
+    // },
+    // migrations: {
+    //   directory: "./database/migrations"
+    // },
+    // seeds: {
+    //   directory: "./database/seeds"
+    // },
   },
   // production: {
   //   client: 'postgresql',
