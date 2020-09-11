@@ -6,7 +6,7 @@ module.exports = {
     connection: {
       host: '70.32.23.16',
       user: 'bluesmok',
-      password: '22;YHv1rKE5g.p',
+      password: process.env.DB_PASS,
       database: 'bluesmok_newsletter'
     },
     migrations: {
@@ -56,7 +56,7 @@ module.exports = {
     connection: {
       host: '70.32.23.16',
       user: 'bluesmok',
-      password: '22;YHv1rKE5g.p',
+      password: process.env.DB_PASS,
       database: 'bluesmok_newsletter'
     },
     migrations: {
