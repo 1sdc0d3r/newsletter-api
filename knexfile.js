@@ -2,9 +2,12 @@
 
 module.exports = {
   development: {
-    client: 'sqlite3',
+    client: 'mysql',
     connection: {
-      filename: './newsletter.sqlite3'
+      host: '70.32.23.16',
+      user: 'bluesmok',
+      password: '22;YHv1rKE5g.p',
+      database: 'bluesmok_newsletter'
     },
     migrations: {
       directory: "./database/migrations"
@@ -17,13 +20,13 @@ module.exports = {
   testing: {
     client: "sqlite3",
     connection: {
-      filename: "./database"
+      filename: "./database/testing.sqlite3"
     },
     migrations: {
-      directory: "./database"
+      directory: "./database/migrations"
     },
     seeds: {
-      directory: "./database"
+      directory: "./database/seeds"
     },
     pool: {
       afterCreate: (conn, done) => {
